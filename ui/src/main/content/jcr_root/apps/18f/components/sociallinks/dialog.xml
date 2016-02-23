@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Social Links"
+          xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Link(s) Configuration"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <facebookEnabled
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldLabel="Enable Facebook"
+                        inputValue="{Boolean}true"
+                        name="./facebookEnabled"
+                        type="checkbox"
+                        xtype="selection"/>
+                <twitterEnabled
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldLabel="Enable Twitter"
+                        inputValue="{Boolean}true"
+                        name="./twitterEnabled"
+                        type="checkbox"
+                        xtype="selection"/>
+                <youtubeEnabled
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldLabel="Enable Youtube"
+                        inputValue="{Boolean}true"
+                        name="./youtubeEnabled"
+                        type="checkbox"
+                        xtype="selection"/>
+                <rssEnabled
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldLabel="Enable RSS"
+                        inputValue="{Boolean}true"
+                        name="./rssEnabled"
+                        type="checkbox"
+                        xtype="selection"/>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

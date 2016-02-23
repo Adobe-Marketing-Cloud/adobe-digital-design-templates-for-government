@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Accordion"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Configuration"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <accordionTabs
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter the Accordion Label for each item"
+                        fieldLabel="Accordion Tabs"
+                        name="./accordionTabs"
+                        xtype="multifield">
+                    <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            width="155"
+                            xtype="textfield"/>
+                </accordionTabs>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

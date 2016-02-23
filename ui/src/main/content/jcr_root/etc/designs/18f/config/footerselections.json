@@ -1,0 +1,19 @@
+{
+  "images":[
+    {
+      "name":"Slim (Default)",
+      "imagepath": "/etc/designs/18f/images/footer-slim.png",
+      "value":"slim"
+    },
+    {
+      "name":"Medium",
+      "imagepath": "/etc/designs/18f/images/footer-medium.png",
+      "value":"medium"
+    },
+    {
+      "name":"Big",
+      "imagepath": "/etc/designs/18f/images/footer-big.png",
+      "value":"big"
+    }
+  ]
+}

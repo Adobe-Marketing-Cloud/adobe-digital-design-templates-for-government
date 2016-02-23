@@ -1,0 +1,24 @@
+{
+  "images":[
+    {
+      "name":"Information (Default)",
+      "imagepath": "/etc/designs/18f/images/usa-alert-info.png",
+      "value":"usa-alert-info"
+    },
+    {
+      "name":"Success",
+      "imagepath": "/etc/designs/18f/images/usa-alert-success.png",
+      "value":"usa-alert-success"
+    },
+    {
+      "name":"Warning",
+      "imagepath": "/etc/designs/18f/images/usa-alert-warning.png",
+      "value":"usa-alert-warning"
+    },
+    {
+      "name":"Error",
+      "imagepath": "/etc/designs/18f/images/usa-alert-error.png",
+      "value":"usa-alert-error"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>gov.eighteenf.cq</groupId>
+		<version>1.0</version>
+		<relativePath>../parent</relativePath>
+	</parent>
+	<artifactId>cq-core</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+	<name>18F AEM --&gt; PARENT --&gt; CORE</name>
+	<description>An OSGi Bundle containing the backend CQ service implementations for 18F</description>
+	<properties>
+		<!-- inherited -->
+	</properties>
+	<dependencies>
+		<!-- inherited from parent POM ..\parent\pom.xml -->
+	</dependencies>
+	<build>
+
+		<plugins>
+			<!-- enforces java 7 and proper maven version -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>1.4.1</version>
+				<executions>
+					<execution>
+						<id>enforce-java</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<message>Project must be built with Maven 3.1 or higher</message>
+									<version>3.1</version>
+								</requireMavenVersion>
+								<requireJavaVersion>
+									<message>Project must be compiled with Java 8 or higher</message>
+									<version>1.7.0</version>
+								</requireJavaVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Maven SCR Plugin -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-scr-plugin</artifactId>
+				<configuration>
+					<scanClasses>true</scanClasses>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-scr-scrdescriptor</id>
+						<goals>
+							<goal>scr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- GMaven Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<verbose>false</verbose>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<!-- Maven Bundle Plugin -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Name>18F AEM Core</Bundle-Name>
+						<Bundle-Description>An OSGi Bundle containing the backend AEM
+							service implementations for 18F</Bundle-Description>
+						<Bundle-SymbolicName>gov.eighteenf.cq</Bundle-SymbolicName>
+						<Export-Package>gov.eighteenf.cq.*</Export-Package>
+                        <Sling-Model-Packages>gov.eighteenf.cq.comps</Sling-Model-Packages>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+	</build>
+	<profiles>
+		<!-- DEFAULT LocalHost Build to Author -->
+		<profile>
+			<id>4502</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+				<plugin>
+					<groupId>org.apache.sling</groupId>
+					<artifactId>maven-sling-plugin</artifactId>
+					<version>2.1.0</version>
+					<executions>
+						<execution>
+							<id>install-bundle</id>
+							<goals>
+								<goal>install</goal>
+							</goals>
+							<configuration>
+								<slingUrl>http://localhost:4502/system/console/bundles</slingUrl>
+								<user>admin</user>
+								<password>admin</password>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<scm>
+		<url>git@bitbucket.org:mavendc/18f.git/core</url>
+		<developerConnection>https://bitbucket.org/mavendc/18f/src</developerConnection>
+	</scm>
+</project>

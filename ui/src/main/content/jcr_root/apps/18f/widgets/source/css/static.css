@@ -1,0 +1,244 @@
+#CQ label {
+    display: inline;
+    line-height: normal;
+    font-size: inherit;
+}
+
+#CQ legend {
+    margin-bottom: 0px;
+    border: none;
+    width: auto;
+}
+
+#CQ fieldset {
+    border: inherit;
+    margin: inherit;
+    padding: inherit;
+    min-width: 99%;
+}
+
+div.cq-redirect-notice {
+    margin: 20px 0 20px 0;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 40px;
+}
+
+.cq-placeholder {
+    width: 74px;
+    height: 74px;
+    border: 2px dashed #CCC;
+}
+
+
+#CQ .x-form-check-wrap .x-form-radio {
+    margin: 0 0 0 1px;
+    height: 14px;
+    vertical-align: text-top;
+}
+
+
+#CQ .x-form-field-wrap.floating,
+#CQ .x-form-field.invisible-input {
+    width:100% !important;
+    padding-top: 0 !important;
+}
+
+
+#CQ .x-toolbar table {
+  min-width: 0%; 
+}
+
+
+#CQ ul li:before, #CQ ul li:after   {
+display: none;
+}
+
+
+#CQ .x-form-element input[type="checkbox"] + label::before, input[type="radio"] + label::before {
+display: none;
+}
+
+#CQ .x-form-element input[type="radio"] + label::before, input[type="radio"] + label::before {
+display: none;
+}
+
+
+#CQ label {
+    margin-top: 0px;
+}
+
+.ext-strict #CQ .x-form-text {
+    height: 22px;
+}
+
+
+input.x-form-text {box-sizing: content-box;}
+
+#CQ .x-form-check-wrap input.x-form-radio {
+margin: 0 0 0 1px;
+}
+
+
+.x-window table {
+min-width: auto;
+}
+
+.x-window table td {
+border: 0px;
+}
+
+.ext-strict #CQ input.x-form-text {
+height: 22px;
+}
+
+
+div.cq-colctrl-cols {width: 100%; float: left; }
+
+div.cq-colctrl-default { width: 100%;}
+
+div.cq-colctrl-lt0 { background:url(/etc/designs/18f/images/cq-colctrl-lt0.gif) repeat-y scroll 0 0;}
+div.cq-colctrl-lt0-c0 { width: 48%; padding-right: 14px;}
+div.cq-colctrl-lt0-c1 { width: 49% }
+
+div.cq-colctrl-lt1 { background:url(/etc/designs/18f/images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}
+div.cq-colctrl-lt1-c0 { width: 34%; padding-right: 14px;}
+div.cq-colctrl-lt1-c1 { width: 63%;}
+
+div.cq-colctrl-lt2 { background:url(/etc/designs/18f/images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}
+div.cq-colctrl-lt2-c0 { width: 31%; padding-right: 14px;}
+div.cq-colctrl-lt2-c1 { width: 31%; padding-right: 14px;}
+div.cq-colctrl-lt2-c2 { width: 32%; }
+
+div.cq-colctrl-lt3 { background:url(/etc/designs/18f/images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; }
+div.cq-colctrl-lt3-c0 { width: 46%; padding-right: 14px;}
+div.cq-colctrl-lt3-c1 { width: 24%; padding-right: 14px;}
+div.cq-colctrl-lt3-c2 { width: 24%; }
+
+div.cq-colctrl-lt4 { margin:-18px 0pt;}
+div.cq-colctrl-lt4-c0 { width: 38%; padding-right: 4px;}
+div.cq-colctrl-lt4-c1 { width: 58% }
+
+
+/*
+Columns (Bootstrap)
+-------------------   */
+#CQ table.o12 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o12.png) no-repeat center center;
+}
+
+#CQ table#o12.x-btn-pressed td.x-btn-mc,
+#CQ table#o12.x-btn-over td.x-btn-mc,
+#CQ table#o12.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o12_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o12.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o6x6 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o6x6.png) no-repeat center center;
+}
+
+#CQ table#o6x6.x-btn-pressed td.x-btn-mc,
+#CQ table#o6x6.x-btn-over td.x-btn-mc,
+#CQ table#o6x6.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o6x6_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o6x6.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o4x8 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o4x8.png) no-repeat center center;
+}
+
+#CQ table#o4x8.x-btn-pressed td.x-btn-mc,
+#CQ table#o4x8.x-btn-over td.x-btn-mc,
+#CQ table#o4x8.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o4x8_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o4x8.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o3x9 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o3x9.png) no-repeat center center;
+}
+
+#CQ table#o3x9.x-btn-pressed td.x-btn-mc,
+#CQ table#o3x9.x-btn-over td.x-btn-mc,
+#CQ table#o3x9.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o3x9_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o3x9.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o8x4 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o8x4.png) no-repeat center center;
+}
+
+#CQ table#o8x4.x-btn-pressed td.x-btn-mc,
+#CQ table#o8x4.x-btn-over td.x-btn-mc,
+#CQ table#o8x4.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o8x4_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o8x4.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o9x3 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o9x3.png) no-repeat center center;
+}
+
+#CQ table#o9x3.x-btn-pressed td.x-btn-mc,
+#CQ table#o9x3.x-btn-over td.x-btn-mc,
+#CQ table#o9x3.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o9x3_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o9x3.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o4x4x4 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o4x4x4.png) no-repeat center center;
+}
+
+#CQ table#o4x4x4.x-btn-pressed td.x-btn-mc,
+#CQ table#o4x4x4.x-btn-over td.x-btn-mc,
+#CQ table#o4x4x4.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o4x4x4_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o4x4x4.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}
+
+#CQ table.o3x3x3x3 td.x-btn-mc {
+    background: transparent url(/etc/designs/18f/images/o3x3x3x3.png) no-repeat center center;
+}
+
+#CQ table#o3x3x3x3.x-btn-pressed td.x-btn-mc,
+#CQ table#o3x3x3x3.x-btn-over td.x-btn-mc,
+#CQ table#o3x3x3x3.x-btn-pressed.x-btn-over td.x-btn-mc {
+    background-image: url(/etc/designs/18f/images/o3x3x3x3_on.png);
+    background-position: center 1px;
+}
+
+#CQ table#o3x3x3x3.x-btn-over td.x-btn-mc {
+    background-position: center -34px;
+}

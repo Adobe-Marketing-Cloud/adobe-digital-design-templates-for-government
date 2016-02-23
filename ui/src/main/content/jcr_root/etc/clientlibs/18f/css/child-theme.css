@@ -1,0 +1,111 @@
+.usa-grid {
+max-width: 100%;
+}
+
+div.search form input {
+display: inline;
+}
+
+aside.sidenav {
+    width: 250px;
+    border-right: 1px solid #aeb0b5;
+    padding: 5rem 3rem 3rem 3rem;
+    overflow: auto;
+}
+
+
+#main-content .usa-grid h2 {
+
+	margin: 0px 10px 10px 0px;
+}
+
+ ul.usa-topnav-list li:before {
+	content: none;
+}
+
+ ul.usa-topnav-list {
+  list-style: none;
+  background-color: #1f7589;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+.usa-topnav-list li {
+  font-size: 1.0em;
+  line-height: 20px;
+  height: 20px;
+  border-bottom: 1px solid #888;
+}
+ 
+.usa-topnav-list a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.usa-topnav-list a:hover {
+  background-color: #2c98b2;
+}
+ 
+.usa-topnav-list a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .usa-topnav-list li {
+    width: 120px;
+    border-bottom: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.4em;
+  }
+ 
+  .usa-topnav-list li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+}
+
+.usa-social-links a:hover {
+	text-decoration: none;
+}
+
+.usa-social-links a{
+  display: inline-block; 
+}
+
+.usa-site-header .logo a{
+  display: inline-block; 
+}
+
+footer .usa-footer-nav a{
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+}
+
+
+footer .usa-footer-nav ul.default {
+	display: block;
+}
+
+
+@media screen and (min-width: 600px) {
+header .logo {
+  max-width: 100%;
+}
+}
+
+@media screen and (min-width: 481px) {
+header .logo {
+  max-width: 200px;
+}
+}
+
+.form_rightcol_wrapper label{
+  display: none;
+}

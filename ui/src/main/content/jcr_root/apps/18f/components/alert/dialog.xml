@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Alert"
+          cq:dialogMode="floating"
+          xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Configuration"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <headerText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Header Text"
+                        name="./headerText"
+                        xtype="textfield"/>
+            </items>
+        </tab1>
+        <tab2
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Styling"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <alerttype
+                        jcr:primaryType="cq:Widget"
+                        title="Alert Type Selection"
+                        name="./alerttype"
+                        xtype="visuallist"
+                        collapsible="false"
+                        datalocation="/etc/designs/18f/config/alertselections.json"/>
+            </items>
+        </tab2>
+    </items>
+</jcr:root>

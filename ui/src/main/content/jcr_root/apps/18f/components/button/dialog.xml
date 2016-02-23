@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Button"
+          xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Button"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <buttonBehavior
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Button Behavior"
+                        xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <label
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Label"
+                                name="./label"
+                                xtype="textfield"/>
+                        <link
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Button Link"
+                                linkPattern="\{0}"
+                                name="./link"
+                                xtype="pathfield"/>
+                    </items>
+                </buttonBehavior>
+            </items>
+        </tab1>
+        <tab2
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Button Styling"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <buttonType
+                        jcr:primaryType="cq:Widget"
+                        title="Button Type Selection"
+                        name="./buttonType"
+                        xtype="visuallist"
+                        collapsible="false"
+                        datalocation="/etc/designs/18f/config/buttonselections.json"/>
+            </items>
+        </tab2>
+    </items>
+</jcr:root>

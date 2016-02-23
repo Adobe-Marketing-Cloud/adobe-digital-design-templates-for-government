@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          height="500"
+          helpPath=""
+          title="Hero Container"
+          width="600"
+          xtype="dialog">
+    <items
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                    jcr:primaryType="cq:Widget"
+                    anchor="100%"
+                    title="Background"
+                    xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <displayprops
+                            jcr:primaryType="cq:Widget"
+                            title="Display Properties"
+                            xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <defaultbgImageResourceSetter
+                                    jcr:primaryType="cq:Widget"
+                                    ignoreData="{Boolean}true"
+                                    name="./bgImage/sling:resourceType"
+                                    value="foundation/components/adaptiveimage"
+                                    xtype="hidden"/>
+                            <defaultimage
+                                    jcr:primaryType="cq:Widget"
+                                    cropParameter="./bgImage/imageCrop"
+                                    ddGroups="[media]"
+                                    fileNameParameter="./bgImage/fileName"
+                                    fileReferenceParameter="./bgImage/fileReference"
+                                    mapParameter="./bgImage/imageMap"
+                                    name="./bgImage/file"
+                                    height="{Long}200"
+                                    width="{Long}450"
+                                    requestSuffix="/bgImage.img.png"
+                                    rotateParameter="./bgImage/imageRotate"
+                                    title="Image"
+                                    xtype="html5smartimage"/>
+                            <imageSizing
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="cover"
+                                    fieldLabel="Image Sizing"
+                                    name="./imageSizing"
+                                    type="select"
+                                    xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <cover
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Cover (Default)"
+                                            value="cover"/>
+                                    <auto
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Auto"
+                                            value="auto"/>
+                                    <contain
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Contain"
+                                            value="contain"/>
+                                </options>
+                            </imageSizing>
+                            <bgcolor
+                                    jcr:primaryType="cq:Widget"
+                                    boxMaxWidth="120"
+                                    fieldDescription="Transparent when left empty"
+                                    fieldLabel="Background Color"
+                                    name="./bgcolor"
+                                    xtype="bacolorfield"/>
+                            <spanFullPageWidth
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Span Full Page Width?"
+                                    fieldDescription="Will force the background image to span the width of the page outside of the given content area. This behavior may not be consistent if placed in an improper layout, or Image sizing is not 'cover', or if the container is not centered "
+                                    inputValue="{Boolean}true"
+                                    name="./spanFullPageWidth"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                        </items>
+                    </displayprops>
+
+                </items>
+            </tab1>
+            <tab2
+                    jcr:primaryType="cq:Widget"
+                    anchor="100%"
+                    title="Advanced"
+                    xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <layout
+                            jcr:primaryType="cq:Widget"
+                            title="Layout and Styling"
+                            xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <imageStyling
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="no-repeat"
+                                    fieldLabel="Image Styling"
+                                    name="./imageStyling"
+                                    type="select"
+                                    xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                            jcr:primaryType="nt:unstructured"
+                                            text="None"
+                                            value="no-repeat"/>
+                                    <repeat-x
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Repeat Horizontally"
+                                            value="repeat-x"/>
+                                    <repeat-y
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Repeat Vertically"
+                                            value="repeat-y"/>
+                                </options>
+                            </imageStyling>
+                            <backgroundPosition
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="center center"
+                                    fieldLabel="Background Position"
+                                    name="./backgroundPosition"
+                                    type="select"
+                                    xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <center-center
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Center Center (Default)"
+                                            value="center center"/>
+                                    <left-top
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Left Top"
+                                            value="left top"/>
+                                    <left-center
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Left Center"
+                                            value="left center"/>
+                                    <left-bottom
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Left Bottom"
+                                            value="left bottom"/>
+                                    <right-top
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Right Top"
+                                            value="right top"/>
+                                    <right-center
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Right Center"
+                                            value="right center"/>
+                                    <right-bottom
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Right Bottom"
+                                            value="right bottom"/>
+                                    <center-top
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Center Top"
+                                            value="center top"/>
+                                    <center-bottom
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Center Bottom"
+                                            value="center bottom"/>
+                                    <none
+                                            jcr:primaryType="nt:unstructured"
+                                            text="None"
+                                            value=""/>
+                                </options>
+                            </backgroundPosition>
+                            <verticalPadding
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Vertical Padding (px)"
+                                    heightSuffix="(top)"
+                                    heightPrefix="   "
+                                    heightParameter="./topPadding"
+                                    widthSuffix="(bottom)"
+                                    widthPrefix="   "
+                                    widthParameter="./bottomPadding"
+                                    xtype="sizefield"/>
+                            <horizontalPadding
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Horizontal Padding (px)"
+                                    fieldDescription="This field does not apply when 'Span Full Page Width' is checked"
+                                    heightSuffix="(right)"
+                                    heightPrefix="   "
+                                    heightParameter="./rightPadding"
+                                    widthSuffix="(left)"
+                                    widthPrefix="   "
+                                    widthParameter="./leftPadding"
+                                    xtype="sizefield"/>
+                            <verticalMargins
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Vertical Margin (px)"
+                                    heightSuffix="(top)"
+                                    heightPrefix="   "
+                                    heightParameter="./topMargin"
+                                    widthSuffix="(bottom)"
+                                    widthPrefix="   "
+                                    widthParameter="./bottomMargin"
+                                    xtype="sizefield"/>
+                            <cssClass
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="CSS Class"
+                                    name="./cssClass"
+                                    xtype="textfield"/>
+                        </items>
+                    </layout>
+                </items>
+            </tab2>
+        </items>
+    </items>
+
+</jcr:root>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vault version="1.0">
+  <ignore name=".DS_Store"/>
+  <ignore name=".gitignore"/>
+  <ignore name=".git"/>
+  <ignore name=".svn"/>
+</vault>

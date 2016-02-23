@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>FileVault Package Properties</comment>
+	<entry key="description">Contains AEM templates and components based upon the 18F Design Standards </entry>
+</properties>

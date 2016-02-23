@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          height="400"
+          stateful="false"
+          xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/18f/components/page/dialog/tab_basic.infinity.json"
+                        xtype="cqinclude"/>
+                <advanced
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/18f/components/page/dialog/tab_advanced.infinity.json"
+                        xtype="cqinclude"/>
+                <image
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/18f/components/page/dialog/tab_image.infinity.json"
+                        xtype="cqinclude"/>
+                <cloudservices
+                        jcr:primaryType="cq:Widget"
+                        path="/libs/foundation/components/page/tab_cloudservices.infinity.json"
+                        xtype="cqinclude"/>
+                <blueprint
+                        jcr:primaryType="cq:Widget"
+                        path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                        xtype="cqinclude"/>
+                <livecopy
+                        jcr:primaryType="cq:Widget"
+                        path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                        xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+    <tab_advanced
+            jcr:primaryType="cq:Panel"
+            title="Advanced">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <advanced
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <language
+                            jcr:primaryType="cq:Widget"
+                            cls="cq-propsdialog-pagelanguage"
+                            fieldLabel="Language"
+                            name="./jcr:language"
+                            optionsProvider="CQ.utils.WCM.getLanguageOptions"
+                            type="select"
+                            xtype="selection"/>
+                    <redirect
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Redirect"
+                            name="./redirectTarget"
+                            xtype="pathfield"/>
+                    <designpath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Design"
+                            name="./cq:designPath"
+                            predicate="hierarchyNotFile"
+                            rootPath="/etc/designs"
+                            xtype="pathfield"/>
+                    <alias
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Alias"
+                            name="./sling:alias"
+                            xtype="textfield"/>
+                </items>
+            </advanced>
+            <segments
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    title="Segments"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <segments
+                            jcr:primaryType="cq:Widget"
+                            hideLabel="{Boolean}true"
+                            name="./cq:segments"
+                            xtype="multifield">
+                        <fieldConfig
+                                jcr:primaryType="nt:unstructured"
+                                rootPath="/etc/segmentation"
+                                xtype="pathfield"/>
+                    </segments>
+                </items>
+            </segments>
+            <export
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    title="Export"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <template
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Export Configuration"
+                            name="./cq:exportTemplate"
+                            predicate="nosystem"
+                            rootPath="/etc/contentsync/templates"
+                            rootTitle="Templates"
+                            xtype="pathfield"/>
+                </items>
+            </export>
+            <design
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    title="Layout and Design"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pageLayout
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="usa-grid"
+                            fieldLabel="Page Layout"
+                            name="./pageLayout"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <fixed
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Fixed Width"
+                                    value="usa-grid-full"/>
+                            <fullwidth
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Full Width"
+                                    value="usa-grid"/>
+                        </options>
+                    </pageLayout>                    
+                    <showHeader
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="show"
+                            fieldLabel="Show Header?"
+                            name="./showHeader"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <o0
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Show Header"
+                                    value="show"/>
+                            <o1
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Hide Header"
+                                    value="hide"/>
+                        </options>
+                    </showHeader>
+                    <showFooter
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="show"
+                            fieldLabel="Show Footer?"
+                            name="./showFooter"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <o0
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Show Footer"
+                                    value="show"/>
+                            <o1
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Hide Footer"
+                                    value="hide"/>
+                        </options>
+                    </showFooter>
+                </items>
+            </design>
+        </items>
+    </tab_advanced>
+    <tab_basic
+            jcr:primaryType="cq:Panel"
+            title="Basic">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <basic
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Title"
+                            name="./jcr:title"
+                            xtype="textfield"/>
+                    <tags
+                            jcr:primaryType="cq:Widget"
+                            cls="cq-propsdialog-tags"
+                            fieldLabel="Tags/Keywords"
+                            name="./cq:tags"
+                            xtype="tags">
+                    </tags>
+                    <hideinnav
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="{Boolean}true"
+                            fieldLabel="Hide in Navigation"
+                            inputValue="true"
+                            name="./hideInNav"
+                            type="checkbox"
+                            xtype="selection"/>
+                    <hideSharebarInFooter
+                            jcr:primaryType="cq:Widget"
+                            defaultValue=""
+                            fieldDescription="Only affects footer"
+                            fieldLabel="Hide Sharebar"
+                            name="./hideSharebarInFooter"
+                            type="radio"
+                            value=""
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <show
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Show"
+                                    value="{Boolean}false"/>
+                            <hide
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Hide"
+                                    value="{Boolean}true"/>
+                            <default
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Default"
+                                    value=""/>
+                        </options>
+                    </hideSharebarInFooter>
+                </items>
+            </basic>
+            <more_titles
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    title="More Titles and Description"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pagetitle
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Page Title"
+                            name="./pageTitle"
+                            xtype="textfield"/>
+                    <navtitle
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Navigation Title"
+                            name="./navTitle"
+                            xtype="textfield"/>
+                    <hidetitle
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Hide Page Title"
+                            inputValue="true"
+                            name="./hideTitle"
+                            type="checkbox"
+                            xtype="selection"/>
+                    <description
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Description"
+                            name="./jcr:description"
+                            xtype="textarea"/>
+                    <metaDescription
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Meta Description"
+                            name="./metaDescription"
+                            xtype="textarea"/>
+                </items>
+            </more_titles>
+            <onofftime
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-set-onofftime"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    title="On/Off Time"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ontime
+                            jcr:primaryType="cq:Widget"
+                            ctCls="cq-propsdialog-ontime"
+                            fieldLabel="On Time"
+                            name="./onTime"
+                            xtype="datetime"/>
+                    <offtime
+                            jcr:primaryType="cq:Widget"
+                            ctCls="cq-propsdialog-offtime"
+                            fieldLabel="Off Time"
+                            name="./offTime"
+                            xtype="datetime"/>
+                    <onTimeHint
+                            jcr:primaryType="cq:Widget"
+                            ignoreData="{Boolean}true"
+                            name="./onTime@TypeHint"
+                            value="Date"
+                            xtype="hidden"/>
+                    <offTimeHint
+                            jcr:primaryType="cq:Widget"
+                            ignoreData="{Boolean}true"
+                            name="./offTime@TypeHint"
+                            value="Date"
+                            xtype="hidden"/>
+                </items>
+            </onofftime>
+            <vanity
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    title="Vanity URL"
+                    xtype="dialogfieldset">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <vanityPath
+                            jcr:primaryType="cq:Widget"
+                            cls="cq-propsdialog-vanityurl"
+                            fieldLabel="Vanity URL"
+                            name="./sling:vanityPath"
+                            xtype="multifield">
+                        <fieldConfig
+                                jcr:primaryType="nt:unstructured"
+                                allowBlank="{Boolean}false"
+                                xtype="textfield"/>
+                    </vanityPath>
+                    <vanityPathRedirect
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Redirect Vanity URL"
+                            name="./sling:redirect"
+                            type="checkbox"
+                            xtype="selection"/>
+                </items>
+            </vanity>
+        </items>
+    </tab_basic>
+    <tab_image
+            jcr:primaryType="cq:Widget"
+            allowUpload="{Boolean}false"
+            cropParameter="./image/imageCrop"
+            ddGroups="[media]"
+            fileNameParameter="./image/fileName"
+            fileReferenceParameter="./image/fileReference"
+            mapParameter="./image/imageMap"
+            name="./image/file"
+            renditionSuffix="/_jcr_content/renditions/original"
+            requestSuffix=".img.png"
+            rotateParameter="./image/imageRotate"
+            title="Image"
+            xtype="html5smartimage"/>
+</jcr:root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Defines which repository items are generally included
+-->
+<workspaceFilter vesion="1.0">
+    <filter root="/apps/18f" />
+    <filter root="/etc/clientlibs/18f"/>
+    <filter root="/etc/designs/18f" />
+</workspaceFilter>

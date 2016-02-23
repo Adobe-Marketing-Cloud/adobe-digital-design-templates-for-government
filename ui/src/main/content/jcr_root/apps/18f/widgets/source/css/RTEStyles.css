@@ -1,0 +1,16 @@
+/* For small and big labels Does NOT need to be included in the client lib, as is referenced by the externalStylesheets prop of the RTE */
+.usa-label, .usa-label-big {
+    background-color: #0071bc;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.usa-label-big {
+    font-size: 1.7rem;
+}
+
+a.usa-label:hover, a.usa-label-big:hover {
+    background-color: #205493;
+    color: #ffffff;
+}

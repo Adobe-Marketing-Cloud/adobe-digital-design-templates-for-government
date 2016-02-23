@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>gov.eighteenf.cq</groupId>
+        <version>1.0</version>
+        <relativePath>../parent</relativePath>
+    </parent>
+    <artifactId>ui</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>18F AEM --&gt; PARENT --&gt; UI</name>
+    <description>18F AEM UI</description>
+    <build>
+        <resources>
+            <!-- filter meta information to get properties into the files -->
+            <resource>
+                <targetPath>META-INF</targetPath>
+                <filtering>true</filtering>
+                <directory>${basedir}/src/main/content/META-INF</directory>
+            </resource>
+            <!-- exclude .vlt control files and tests -->
+            <resource>
+                <targetPath>jcr_root</targetPath>
+                <directory>${basedir}/src/main/content/jcr_root</directory>
+                <excludes>
+                    <exclude>**/.vlt</exclude>
+                    <exclude>**/.vltignore</exclude>
+                    <exclude>**/.DS_Store</exclude>
+                    <exclude>**/.gitignore</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <finalName>${web.property}-${web.module}-${web.buildNumber}</finalName>
+        <plugins>
+            <!-- NPM (Coffee, etc) Script-->
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>0.0.28</version>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <configuration>
+                            <nodeVersion>v4.2.6</nodeVersion>
+                            <npmVersion>2.14.12</npmVersion>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>gulp build</id>
+                        <goals>
+                            <goal>gulp</goal>
+                        </goals>
+                    </execution>
+
+                </executions>
+            </plugin>
+            <!-- Copy the runtime bundles -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-bundles</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/classes/jcr_root/apps/18f/install
+                            </outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                            <includeScope>runtime</includeScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/classes/jcr_root/apps/18f/install
+                            </outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/../../core/target</directory>
+                                    <includes>
+                                        <include>*.jar</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <!-- LOCALHOST Author (DEFAULT) -->
+        <profile>
+            <id>4502</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.sixdimensions.wcm.cq</groupId>
+                        <artifactId>cq-deploy-plugin</artifactId>
+                        <version>0.0.4</version>
+                        <executions>
+                            <execution>
+                                <id>install-package-author</id>
+                                <goals>
+                                    <goal>install-package</goal>
+                                </goals>
+                                <configuration>
+                                    <deleteFirst>true</deleteFirst>
+                                    <packageFile>target/${web.property}-${web.module}-${web.buildNumber}.jar
+                                    </packageFile>
+                                    <host>http://localhost</host>
+                                    <port>4502</port>
+                                    <user>admin</user>
+                                    <password>admin</password>
+                                    <path>${web.property}-${web.module}-${web.buildNumber}.jar</path>
+                                    <uploadOnly>false</uploadOnly>
+                                    <errorOnFailure>true</errorOnFailure>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <scm>
+        <url>git@bitbucket.org:mavendc/18f.git/ui</url>
+        <developerConnection>https://bitbucket.org/mavendc/18f/src</developerConnection>
+    </scm>
+</project>

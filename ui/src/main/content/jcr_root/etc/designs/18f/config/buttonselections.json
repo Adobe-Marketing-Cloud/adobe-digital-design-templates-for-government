@@ -1,0 +1,44 @@
+{
+  "images":[
+    {
+      "name":"Primary",
+      "imagepath": "/etc/designs/18f/images/usa-button-primary.png",
+      "value":"default-button-class"
+    },
+    {
+      "name":"Primary (Alternate)",
+      "imagepath": "/etc/designs/18f/images/usa-button-primary-alt.png",
+      "value":"usa-button-primary-alt"
+    },
+    {
+      "name":"Secondary",
+      "imagepath": "/etc/designs/18f/images/usa-button-secondary.png",
+      "value":"usa-button-secondary"
+    },
+    {
+      "name":"Gray",
+      "imagepath": "/etc/designs/18f/images/usa-button-gray.png",
+      "value":"usa-button-gray"
+    },
+    {
+      "name":"Outline",
+      "imagepath": "/etc/designs/18f/images/usa-button-outline.png",
+      "value":"usa-button-outline"
+    },
+    {
+      "name":"Outline Inverse",
+      "imagepath": "/etc/designs/18f/images/usa-button-outline-inverse.png",
+      "value":"usa-button-outline-inverse"
+    },
+    {
+      "name":"Disabled",
+      "imagepath": "/etc/designs/18f/images/usa-button-disabled.png",
+      "value":"usa-button-disabled"
+    },
+    {
+      "name":"Big",
+      "imagepath": "/etc/designs/18f/images/usa-button-big.png",
+      "value":"usa-button-big"
+    }
+  ]
+}

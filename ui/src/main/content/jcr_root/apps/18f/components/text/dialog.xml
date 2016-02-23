@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    grow="{Boolean}true"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Text"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <text
+                    jcr:primaryType="cq:Widget"
+                    hideLabel="{Boolean}true"
+                    externalStyleSheets="[/apps/18f/widgets/source/css/RTEStyles.css]"
+                    name="./text"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <links jcr:primaryType="nt:unstructured"
+                               features="*">
+                        </links>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <findreplace
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="[sourceedit,specialchars]">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars
+                                    jcr:primaryType="nt:unstructured"
+                                    entity="&amp;#8230;"
+                                    RangeEnd="{Long}939"
+                                    startRange="{Long}913">
+                                    <symbols
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}187"
+                                        rangeStart="{Long}126"/>
+                                    <ellipsis
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;#8230;"/>
+                                    <latincapitalletters
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}222"
+                                        rangeStart="{Long}191"/>
+                                    <latinlowercase
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}255"
+                                        rangeStart="{Long}223"/>
+                                    <greekcapitals
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}939"
+                                        rangeStart="{Long}913"/>
+                                    <greeklowercase
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}974"
+                                        rangeStart="{Long}940"/>
+                                    <greeksymbols
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}1020"
+                                        rangeStart="{Long}976"/>
+                                    <fractions
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}190"
+                                        rangeStart="{Long}188"/>
+                                    <extraspacechars
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}8195"
+                                        rangeStart="{Long}8194"/>
+                                    <mathematical
+                                        jcr:primaryType="nt:unstructured"
+                                        rangeEnd="{Long}8805"
+                                        rangeStart="{Long}8700"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <formats jcr:primaryType="cq:WidgetCollection">
+                                <Paragraph
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Paragraph"
+                                    tag="p"/>
+                                <H1
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 1"
+                                    tag="h1"/>
+                                <H2
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 2"
+                                    tag="h2"/>
+                                <H3
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 3"
+                                    tag="h3"/>
+                                <H4
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 4"
+                                    tag="h4"/>
+                                <H5
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 5"
+                                    tag="h5"/>
+                                <H6
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 6"
+                                    tag="h6"/>
+                                <Blockquote
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Blockquote"
+                                    tag="blockquote"/>
+                            </formats>
+                        </paraformat>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <styles
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <styles jcr:primaryType="cq:WidgetCollection">
+                                <smalllabel
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Label (Small)"
+                                    cssName="usa-label"/>
+                                <largelabel
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Label (Large)"
+                                        cssName="usa-label-big"/>
+                            </styles>
+                        </styles>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <table
+                            jcr:primaryType="nt:unstructured"
+                            features=""/>
+                        <undo
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                </text>
+                <isRichTextFlag
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./textIsRich"
+                    value="true"
+                    xtype="hidden"/>
+            </items>
+        </tab1>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        resize="function(component, adjWidth, adjHeight, rawWidth, rawHeight){var dialog = component.findParentByType('dialog');var textWidget = dialog.find('name', './text')[0];textWidget.setHeight(component.getHeight() - 55);}"/>
+</jcr:root>

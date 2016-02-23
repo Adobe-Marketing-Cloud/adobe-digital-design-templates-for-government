@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          height="463"
+          helpPath=""
+          xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <tab1
+                        jcr:primaryType="cq:Panel"
+                        anchor="100%"
+                        title="Columns">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <columnConfiguration
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="o6x6"
+                                fieldDescription="Configuration: Number of Columns, Relative Widths."
+                                fieldLabel="Column Configuration"
+                                hidden="{Boolean}true"
+                                id="columnConfiguration"
+                                name="./columnConfiguration"
+                                xtype="textfield"/>
+                        <oneColumnConfigurations
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}true"
+                                collapsible="{Boolean}true"
+                                name="./oneColumnConfigurations"
+                                title="One Column"
+                                xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <oneCol
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o12"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o12' ) }"
+                                        id="o12"
+                                        name="./o12"
+                                        scale="large"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                            </items>
+                        </oneColumnConfigurations>
+                        <twoColumnConfigurations
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}false"
+                                collapsible="{Boolean}true"
+                                name="./twoColumnConfigurations"
+                                title="Two Columns"
+                                xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <twoCol_a
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o6x6"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o6x6' ) }"
+                                        id="o6x6"
+                                        name="./o6x6"
+                                        scale="large"
+                                        style="margin-bottom:5px;"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                                <twoCol_b
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o4x8"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o4x8' ) }"
+                                        id="o4x8"
+                                        name="./o4x8"
+                                        scale="large"
+                                        style="margin-bottom:5px;"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                                <twoCol_c
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o3x9"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o3x9' ) }"
+                                        id="o3x9"
+                                        name="./o3x9"
+                                        scale="large"
+                                        style="margin-bottom:5px;"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                                <twoCol_d
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o8x4"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o8x4' ) }"
+                                        id="o8x4"
+                                        name="./o8x4"
+                                        scale="large"
+                                        style="margin-bottom:5px;"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                                <twoCol_e
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o9x3"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o9x3' ) }"
+                                        id="o9x3"
+                                        name="./o9x3"
+                                        scale="large"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                            </items>
+                        </twoColumnConfigurations>
+                        <threeColumnConfigurations
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}false"
+                                collapsible="{Boolean}true"
+                                name="./threeColumnConfigurations"
+                                title="Three Columns"
+                                xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <threeCol_a
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o4x4x4"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o4x4x4' ) }"
+                                        id="o4x4x4"
+                                        name="./o4x4x4"
+                                        scale="large"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                            </items>
+                        </threeColumnConfigurations>
+                        <fourColumnConfigurations
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}false"
+                                collapsible="{Boolean}true"
+                                name="./fourColumnConfigurations"
+                                title="Four Columns"
+                                xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <fourCol_a
+                                        jcr:primaryType="cq:Widget"
+                                        cls="o3x3x3x3"
+                                        enableToggle="{Boolean}true"
+                                        handler="function( e ) { e.toggle( 'true' ); CQ.Ext.getCmp( 'columnConfiguration' ).setValue( 'o3x3x3x3' ) }"
+                                        id="o3x3x3x3"
+                                        name="./o3x3x3x3"
+                                        scale="large"
+                                        text=""
+                                        toggleGroup="columnConfigSelect"
+                                        xtype="button"/>
+                            </items>
+                        </fourColumnConfigurations>
+                        <isBorderTop
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="{Boolean}false"
+                                id="isBorderTop"
+                                name="./isBorderTop"
+                                xtype="hidden"/>
+                        <isBorderTopHint
+                                jcr:primaryType="cq:Widget"
+                                ignoreData="{Boolean}true"
+                                name="./isBorderTop@TypeHint"
+                                value="Boolean"
+                                xtype="hidden"/>
+                        <isBorderBottom
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="{Boolean}false"
+                                id="isBorderBottom"
+                                name="./isBorderBottom"
+                                xtype="hidden"/>
+                        <isBorderBottomHint
+                                jcr:primaryType="cq:Widget"
+                                ignoreData="{Boolean}true"
+                                name="./isBorderBottom@TypeHint"
+                                value="Boolean"
+                                xtype="hidden"/>
+                        <isBorderInside
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="{Boolean}false"
+                                id="isBorderInside"
+                                name="./isBorderInside"
+                                xtype="hidden"/>
+                        <isBorderInsideHint
+                                jcr:primaryType="cq:Widget"
+                                ignoreData="{Boolean}true"
+                                name="./isBorderInside@TypeHint"
+                                value="Boolean"
+                                xtype="hidden"/>
+                        <borders
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}false"
+                                collapsible="{Boolean}true"
+                                hidden="{Boolean}true"
+                                title="Borders"
+                                xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <borderOptionButtons
+                                        jcr:primaryType="cq:Widget"
+                                        border="{Boolean}false"
+                                        hideLabel="{Boolean}true"
+                                        layout="table"
+                                        xtype="cq.compositefield">
+                                    <defaults
+                                            jcr:primaryType="nt:unstructured"
+                                            style="min-width: 130px; margin: 0px 3px;"/>
+                                    <items jcr:primaryType="cq:WidgetCollection">
+                                        <border_top
+                                                jcr:primaryType="cq:Widget"
+                                                enableToggle="{Boolean}true"
+                                                id="isBorderTopButton"
+                                                text="Top"
+                                                toggleHandler="function( button, pressed ) { if ( pressed == true ) { CQ.Ext.getCmp( 'isBorderTop' ).setValue( 'true' ); } else { CQ.Ext.getCmp( 'isBorderTop' ).setValue( 'false' ); } }"
+                                                xtype="button"/>
+                                        <border_inside
+                                                jcr:primaryType="cq:Widget"
+                                                enableToggle="{Boolean}true"
+                                                id="isBorderInsideButton"
+                                                text="Inside"
+                                                toggleHandler="function( button, pressed ) { if ( pressed == true ) { CQ.Ext.getCmp( 'isBorderInside' ).setValue( 'true' ); } else { CQ.Ext.getCmp( 'isBorderInside' ).setValue( 'false' ); } }"
+                                                xtype="button"/>
+                                        <border_bottom
+                                                jcr:primaryType="cq:Widget"
+                                                enableToggle="{Boolean}true"
+                                                id="isBorderBottomButton"
+                                                text="Bottom"
+                                                toggleHandler="function( button, pressed ) { if ( pressed == true ) { CQ.Ext.getCmp( 'isBorderBottom' ).setValue( 'true' ); } else { CQ.Ext.getCmp( 'isBorderBottom' ).setValue( 'false' ); } }"
+                                                xtype="button"/>
+                                    </items>
+                                </borderOptionButtons>
+                            </items>
+                        </borders>
+                        <matchColumnHeight
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Match Column Height"
+                                fieldDescription="Select this option to balance all column heights"
+                                name="./matchColumnHeight"
+                                hidden="{Boolean}true"
+                                defaultValue="{Boolean}true"
+                                type="checkbox"
+                                xtype="selection"/>
+                    </items>
+                </tab1>
+                <tab2
+                        jcr:primaryType="cq:Panel"
+                        anchor="100%"
+                        title="Advanced">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <columnsselect
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="0"
+                                fieldLabel="Columns Layout"
+                                name="./columnsselect"
+                                type="select"
+                                xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value="0"/>
+                                <two
+                                        jcr:primaryType="nt:unstructured"
+                                        text="2 Columns"
+                                        value="2"/>
+                                <three
+                                        jcr:primaryType="nt:unstructured"
+                                        text="3 Columns"
+                                        value="3"/>
+                                <four
+                                        jcr:primaryType="nt:unstructured"
+                                        text="4 Columns"
+                                        value="4"/>
+                                <five
+                                        jcr:primaryType="nt:unstructured"
+                                        text="5 Columns"
+                                        value="5"/>
+                                <six
+                                        jcr:primaryType="nt:unstructured"
+                                        text="6 Columns"
+                                        value="6"/>
+                            </options>
+                            <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(box,value){
+                                var dia = box.findParentByType('dialog');
+                                var val = this.getValue();
+                                var columnsCountSet = dia.find('name','./columnscountset')[0];
+                                var columnOne = dia.find('name','./columnone')[0];
+                                var columnTwo = dia.find('name','./columntwo')[0];
+                                var columnThree = dia.find('name','./columnthree')[0];
+                                var columnFour = dia.find('name','./columnfour')[0];
+                                var columnFive = dia.find('name','./columnfive')[0];
+                                var columnSix = dia.find('name','./columnsix')[0];
+
+                                columnsCountSet.hide();
+                                columnOne.hide();
+                                columnTwo.hide();
+                                columnThree.hide();
+                                columnFour.hide();
+                                columnFive.hide();
+                                columnSix.hide();
+
+                                if(val > 0) {
+                                    columnsCountSet.show();
+                                    columnOne.show();
+                                    columnOne.setValue('12');
+                                    columnTwo.setValue('1');
+                                    columnThree.setValue('1');
+                                    columnFour.setValue('1');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 1) {
+                                    columnTwo.show();
+                                    columnOne.setValue('6');
+                                    columnTwo.setValue('6');
+                                    columnThree.setValue('1');
+                                    columnFour.setValue('1');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 2) {
+                                    columnThree.show();
+                                    columnOne.setValue('4');
+                                    columnTwo.setValue('4');
+                                    columnThree.setValue('4');
+                                    columnFour.setValue('1');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 3) {
+                                    columnFour.show();
+                                    columnOne.setValue('3');
+                                    columnTwo.setValue('3');
+                                    columnThree.setValue('3');
+                                    columnFour.setValue('3');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 4) {
+                                    columnFive.show();
+                                    columnOne.setValue('3');
+                                    columnTwo.setValue('3');
+                                    columnThree.setValue('2');
+                                    columnFour.setValue('2');
+                                    columnFive.setValue('2');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 5) {
+                                    columnSix.show();
+                                    columnOne.setValue('2');
+                                    columnTwo.setValue('2');
+                                    columnThree.setValue('2');
+                                    columnFour.setValue('2');
+                                    columnFive.setValue('2');
+                                    columnSix.setValue('2');
+                                }}"
+                                    selectionchanged="function(box,value){
+                                var dia = box.findParentByType('dialog');
+                                var val = this.getValue();
+                                var columnsCountSet = dia.find('name','./columnscountset')[0];
+                                var columnOne = dia.find('name','./columnone')[0];
+                                var columnTwo = dia.find('name','./columntwo')[0];
+                                var columnThree = dia.find('name','./columnthree')[0];
+                                var columnFour = dia.find('name','./columnfour')[0];
+                                var columnFive = dia.find('name','./columnfive')[0];
+                                var columnSix = dia.find('name','./columnsix')[0];
+
+                                columnsCountSet.hide();
+                                columnOne.hide();
+                                columnTwo.hide();
+                                columnThree.hide();
+                                columnFour.hide();
+                                columnFive.hide();
+                                columnSix.hide();
+
+                                if(val == 0) {
+                                    CQ.Ext.getCmp('columnConfiguration').setValue('o12');
+                                }
+                                if(val > 0) {
+                                    columnsCountSet.show();
+                                    columnOne.show();
+                                    columnOne.setValue('12');
+                                    columnTwo.setValue('1');
+                                    columnThree.setValue('1');
+                                    columnFour.setValue('1');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 1) {
+                                    columnTwo.show();
+                                    columnOne.setValue('6');
+                                    columnTwo.setValue('6');
+                                    columnThree.setValue('1');
+                                    columnFour.setValue('1');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 2) {
+                                    columnThree.show();
+                                    columnOne.setValue('4');
+                                    columnTwo.setValue('4');
+                                    columnThree.setValue('4');
+                                    columnFour.setValue('1');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 3) {
+                                    columnFour.show();
+                                    columnOne.setValue('3');
+                                    columnTwo.setValue('3');
+                                    columnThree.setValue('3');
+                                    columnFour.setValue('3');
+                                    columnFive.setValue('1');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 4) {
+                                    columnFive.show();
+                                    columnOne.setValue('3');
+                                    columnTwo.setValue('3');
+                                    columnThree.setValue('2');
+                                    columnFour.setValue('2');
+                                    columnFive.setValue('2');
+                                    columnSix.setValue('1');
+                                }
+                                if(val > 5) {
+                                    columnSix.show();
+                                    columnOne.setValue('2');
+                                    columnTwo.setValue('2');
+                                    columnThree.setValue('2');
+                                    columnFour.setValue('2');
+                                    columnFive.setValue('2');
+                                    columnSix.setValue('2');
+                                }}"
+                                    />
+                        </columnsselect>
+                        <columnscountset
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}false"
+                                collapsible="{Boolean}true"
+                                title="Columns Count"
+                                name="./columnscountset"
+                                xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <columnone
+                                        jcr:primaryType="cq:Widget"
+                                        name="./columnone"
+                                        fieldLabel="Column One"
+                                        defaultValue="1"
+                                        minValue="1"
+                                        width="30"
+                                        xtype="numberfield"/>
+                                <columntwo
+                                        jcr:primaryType="cq:Widget"
+                                        name="./columntwo"
+                                        fieldLabel="Column Two"
+                                        defaultValue="1"
+                                        minValue="1"
+                                        width="30"
+                                        xtype="numberfield"/>
+                                <columnthree
+                                        jcr:primaryType="cq:Widget"
+                                        name="./columnthree"
+                                        fieldLabel="Column Three"
+                                        defaultValue="1"
+                                        minValue="1"
+                                        width="30"
+                                        xtype="numberfield"/>
+                                <columnfour
+                                        jcr:primaryType="cq:Widget"
+                                        name="./columnfour"
+                                        fieldLabel="Column Four"
+                                        defaultValue="1"
+                                        minValue="1"
+                                        width="30"
+                                        xtype="numberfield"/>
+                                <columnfive
+                                        jcr:primaryType="cq:Widget"
+                                        name="./columnfive"
+                                        fieldLabel="Column Five"
+                                        defaultValue="1"
+                                        minValue="1"
+                                        width="30"
+                                        xtype="numberfield"/>
+                                <columnsix
+                                        jcr:primaryType="cq:Widget"
+                                        name="./columnsix"
+                                        fieldLabel="Column Six"
+                                        defaultValue="1"
+                                        minValue="1"
+                                        width="30"
+                                        xtype="numberfield"/>
+                            </items>
+                        </columnscountset>
+                    </items>
+                </tab2>
+            </items>
+        </tabs>
+    </items>
+    <listeners
+            jcr:primaryType="nt:unstructured"
+            loadcontent="function(dialog){ columnBorderPresets( dialog ); }"
+            beforesubmit="function(dialog) {
+                        var columnConfiguration = dialog.getField('./columnConfiguration');
+                        var columnsSelect = dialog.getField('./columnsselect').getValue();
+                        var columnOne = columnsSelect > 0 ? dialog.getField('./columnone').getValue() : 0;
+                        var columnTwo = columnsSelect > 1 ? dialog.getField('./columntwo').getValue() : 0;
+                        var columnThree = columnsSelect > 2 ? dialog.getField('./columnthree').getValue() : 0;
+                        var columnFour = columnsSelect > 3 ? dialog.getField('./columnfour').getValue() : 0;
+                        var columnFive = columnsSelect > 4 ? dialog.getField('./columnfive').getValue() : 0;
+                        var columnSix = columnsSelect > 5 ? dialog.getField('./columnsix').getValue() : 0;
+                        var columnStr = columnConfiguration.getValue();
+
+                        if(columnsSelect > 0 &amp;&amp; (columnOne + columnTwo + columnThree + columnFour + columnFive + columnSix != 12)) {
+	                         CQ.Ext.Msg.show({
+		                        title: 'Invalid Value',
+		                        msg: 'The columns must add to 12',
+		                        icon: CQ.Ext.MessageBox.WARNING,
+		                        buttons: CQ.Ext.Msg.OK
+		                     });
+                            return false;
+                        }
+                        else {
+                            if(columnsSelect > 0) {
+                                columnStr = 'o'+columnOne;
+                            }
+                            if(columnsSelect > 1) {
+                                columnStr += 'x'+columnTwo;
+                            }
+                            if(columnsSelect > 2) {
+                                columnStr += 'x'+columnThree;
+                            }
+                            if(columnsSelect > 3) {
+                                columnStr += 'x'+columnFour;
+                            }
+                            if(columnsSelect > 4) {
+                                columnStr += 'x'+columnFive;
+                            }
+                            if(columnsSelect > 5) {
+                                columnStr += 'x'+columnSix;
+                            }
+                            var needsShowing = false;
+                            if(columnStr.indexOf('5') > -1){needsShowing=true;}
+                            if(columnStr.indexOf('7') > -1){needsShowing=true;}
+                            if(columnStr.indexOf('11') > -1){needsShowing=true;}
+                            if(columnStr.indexOf('12') > -1){needsShowing=true;}
+                            if(needsShowing){
+                                CQ.Ext.Msg.show({
+                                    title: 'Invalid Value',
+                                    msg: 'The numbers 5, 7, 11, and 12 are unsupported',
+                                    icon: CQ.Ext.MessageBox.WARNING,
+                                    buttons: CQ.Ext.Msg.OK
+                                 });
+                                return false;
+                            }
+
+                            CQ.Ext.getCmp('columnConfiguration').setValue(columnStr);
+                        }
+                    }"/>
+</jcr:root>

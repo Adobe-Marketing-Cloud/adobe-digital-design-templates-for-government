@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:actions="[text:Address Configuration,-,editannotate,-,copymove,-,insert,-,delete]"
+          cq:dialogMode="floating"
+          cq:layout="editbar"
+          cq:disableTargeting="true"
+          jcr:primaryType="cq:EditConfig">
+    <cq:inplaceEditing
+            jcr:primaryType="cq:InplaceEditingConfig"
+            active="{Boolean}true"
+            editorType="text"/>
+    <cq:listeners
+            jcr:primaryType="cq:EditListenersConfig"
+            afteredit="REFRESH_PAGE"/>
+</jcr:root>

@@ -1,0 +1,34 @@
+#CQ .EighteenF-visual-list-view .thumb-wrap {
+    /*border-color:#99bbe8; #DFE8F6*/
+    background: #DFE8F6 no-repeat right bottom;
+    padding: 8px; margin: 8px;
+    border: 1px solid #DFE8F6;
+    border-bottom: 1px solid #7c7c7c;
+}
+#CQ .EighteenF-visual-list-view .thumb-wrap.ba-last {
+    border: 1px solid #DFE8F6;
+}
+#CQ .EighteenF-visual-list-view .thumb {
+    float: left;
+    margin-right: 10px;
+}
+#CQ .EighteenF-visual-list-view .thumb-wrap .ba-label {
+    float: left;
+}
+#CQ .EighteenF-visual-list-view .x-view-selected {
+    /*border-color:#99bbe8; #DFE8F6*/
+    background: #ffffff no-repeat right bottom !important;
+    border: 1px solid #9c9c9c !important;
+}
+#CQ .EighteenF-visual-list-view .x-view-over {
+    /*border-color:#99bbe8; #DFE8F6*/
+    background: #eeffee no-repeat right bottom !important;
+    border: 1px solid #9c9c9c !important;
+}
+#CQ .EighteenF-visual-list-view .x-view-over.x-view-selected {
+    background: #f2f2f2 no-repeat right bottom !important;
+}
+/* used within entity taging */
+#CQ .ext-mb-content {
+    max-width:500px;
+}
