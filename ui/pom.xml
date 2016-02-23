@@ -6,7 +6,7 @@
         <artifactId>parent</artifactId>
         <groupId>gov.eighteenf.cq</groupId>
         <version>1.0</version>
-        <relativePath>../parent</relativePath>
+        <relativePath>..</relativePath>
     </parent>
     <artifactId>ui</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -161,7 +161,6 @@
         </profile>
     </profiles>
     <scm>
-        <url>git@bitbucket.org:mavendc/18f.git/ui</url>
-        <developerConnection>https://bitbucket.org/mavendc/18f/src</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/adobe-digital-design-templates-for-government</url>
     </scm>
 </project>

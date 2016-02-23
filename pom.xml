@@ -19,8 +19,8 @@
         <url>http://www.adobe.com/</url>
     </organization>
     <modules>
-        <module>../core</module>
-        <module>../ui</module>
+        <module>core</module>
+        <module>ui</module>
     </modules>
     <properties>
         <file.encoding>utf-8</file.encoding>
